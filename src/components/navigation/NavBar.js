@@ -5,9 +5,11 @@ function NavBar() {
   return (
     <UnorderedList
       display={"flex"}
-      margin={"1em 10em"}
+      justifyContent={"center"}
+      position={"sticky"}
+      margin={"0 auto"}
       textAlign={"center"}
-      paddingBottom={"1em"}
+      paddingTop={".5em"}
       borderBottom={"solid 1px"}
     >
       <NavElement route="./" routeName="Home"></NavElement>

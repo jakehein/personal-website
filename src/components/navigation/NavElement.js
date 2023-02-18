@@ -1,12 +1,22 @@
-import Link from "next/link";
-import { ListItem } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { ListItem, Link } from "@chakra-ui/react";
 function NavElement(props) {
   const route = props.route;
   const routeName = props.routeName;
 
   return (
-    <ListItem flex={"auto"} listStyleType={"none"} paddingX={"1em"}>
-      <Link replace href={route}>
+    <ListItem listStyleType={"none"} padding={"0 1em"} margin={"0"}>
+      <Link
+        as={NextLink}
+        replace
+        href={route}
+        display={"block"}
+        width={"100%"}
+        height={"100%"}
+        textDecoration={"none"}
+        padding={"0 .5em"}
+        lineHeight={"3.5em"}
+      >
         {routeName}
       </Link>
     </ListItem>
