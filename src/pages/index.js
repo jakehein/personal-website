@@ -1,28 +1,37 @@
 //import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
 //import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+//import styles from '@/styles/Home.module.css'
+import { Container, Heading, Text, Image } from "@chakra-ui/react";
 
 //const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Sloth Programming!</h1>
-      <h2>Where ideas are rich and the resident programmer only get out once a week!</h2>
+    <Container>
+      <Heading as="h1" mb={".5em"}>
+        Welcome to Sloth&nbsp;Programming!
+      </Heading>
+      <Heading size={"md"}>
+        Where ideas are rich and the resident programmer only get out once
+        a&nbsp;week!
+      </Heading>
       <Image
         src="/images/sloth.jpg"
         alt="Sloth"
         //className={styles.vercelLogo}
         width={150}
         height={200}
-        priority
+        //priority
       />
-      <div>
-        <p>Less impressive than Zombo.com, but more impressive than nothing...</p>
-      </div>
-    </div>
-  )
+      <Container>
+        <Text fontSize={"md"}>
+          Less impressive than Zombo.com, but more impressive
+          than&nbsp;nothing...
+        </Text>
+      </Container>
+    </Container>
+  );
   // return (
   //   <>
   //     <Head>

@@ -5,7 +5,7 @@ function NavElement(props) {
   const routeName = props.routeName;
 
   return (
-    <ListItem flex={"auto"} listStyleType={"none"}>
+    <ListItem flex={"auto"} listStyleType={"none"} paddingX={"1em"}>
       <Link replace href={route}>
         {routeName}
       </Link>
