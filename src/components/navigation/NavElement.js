@@ -1,5 +1,8 @@
 import NextLink from "next/link";
+// ("use client");
+//import Link from 'next/link';
 import { ListItem, Link } from "@chakra-ui/react";
+//import { Link } from "@chakra-ui/next-js";
 function NavElement(props) {
   const route = props.route;
   const routeName = props.routeName;
