@@ -8,7 +8,12 @@ function NavElement(props) {
   const routeName = props.routeName;
 
   return (
-    <ListItem listStyleType={"none"} padding={"0 1em"} margin={"0"}>
+    <ListItem
+      display={"inline-block"}
+      listStyleType={"none"}
+      padding={"0 0"}
+      margin={"0"}
+    >
       <Link
         as={NextLink}
         replace
@@ -17,7 +22,7 @@ function NavElement(props) {
         width={"100%"}
         height={"100%"}
         textDecoration={"none"}
-        padding={"0 .5em"}
+        padding={"0 .25em"}
         lineHeight={"3.5em"}
       >
         {routeName}
