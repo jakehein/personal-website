@@ -5,8 +5,8 @@ import theme from '../utils/theme'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <AppContainer>
+    <ChakraProvider theme={theme} >
+      <AppContainer >
         <Component {...pageProps} />
       </AppContainer>
     </ChakraProvider>

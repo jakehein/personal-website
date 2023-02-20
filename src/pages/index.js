@@ -22,6 +22,7 @@ export default function Home() {
         //className={styles.vercelLogo}
         width={150}
         height={200}
+        borderRadius={"full"}
         //priority
       />
       <Container>

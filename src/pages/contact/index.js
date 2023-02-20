@@ -74,7 +74,15 @@ function Contact() {
   };
 
   return (
-    <Container maxW="450px" mt={12}>
+    <Container
+      maxW="450px"
+      mt={12}
+      padding={".5em 2em"}
+      border={"groove"}
+      borderRadius={"15%"}
+      backgroundColor={"black"}
+      opacity={".8"}
+    >
       <Heading>Contact Me</Heading>
       {error && (
         <Text color="red.300" my={4} fontSize="xl">
