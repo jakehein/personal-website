@@ -15,11 +15,9 @@ function About() {
         <Image
           src="/images/sloth.jpg"
           alt="Sloth"
-          //className={styles.vercelLogo}
           width={150}
           height={200}
           borderRadius={"full"}
-          //priority
         />
         <Text
           padding={".5em 2em"}
@@ -31,6 +29,17 @@ function About() {
           {
             "I received my Bachelor of Science degree from the University of Wisconsin Oshkosh, majoring in Computer Science. I have a background in history and anthropology, and have a knack for creative problem solving. My most used languages are TypeScript/JavaScript and C#. Most of my experience is backend development, although I have a lot of frontend experience in Vue and Angular. My greatest strength is my willingness to learn new things and adapt to ever-changing obstacles. I enjoy learning new things, and I prefer to make sure I understand what I'm doing before brashly coding something I'm unsure of. This benefits both me an my employers, as I gain useful experience and skills, and they gain an employee/contractor that is openly communicative about their needs on the job. I am dedicated to doing my best work because doing my best is what I am most passionate about."
           }
+        </Text>
+        <Heading size={"lg"}>Philanthropy</Heading>
+
+        <Text
+          padding={".5em 2em"}
+          border={"groove"}
+          borderRadius={"15%"}
+          backgroundColor={"black"}
+          opacity={".8"}
+        >
+          {"INSERT-EXTRA-LIFE-INFO-HERE"}
         </Text>
       </Container>
 

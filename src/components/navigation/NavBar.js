@@ -6,10 +6,8 @@ function NavBar() {
     <Container display={"flex"} justifyContent={"center"}>
       <UnorderedList
         boxSizing="border-box"
-        position={"sticky"}
         margin={"0 auto"}
         textAlign={"center"}
-        paddingTop={".25em"}
         borderBottom={"solid 1px"}
       >
         <NavElement route="./" routeName="Home"></NavElement>
