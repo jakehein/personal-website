@@ -97,7 +97,6 @@ function Contact() {
         <FormLabel>First Name:</FormLabel>
         <Input
           type="text"
-          //id="firstName"
           name="firstName"
           errorBorderColor="red.300"
           value={formData.firstName}
@@ -114,7 +113,6 @@ function Contact() {
         <FormLabel>Last Name:</FormLabel>
         <Input
           type="text"
-          //id="lastName"
           name="lastName"
           errorBorderColor="red.300"
           value={formData.lastName}
@@ -131,7 +129,6 @@ function Contact() {
         <FormLabel>Email:</FormLabel>
         <Input
           type="email"
-          //id="email"
           name="email"
           errorBorderColor="red.300"
           value={formData.email}
@@ -148,7 +145,6 @@ function Contact() {
         <FormLabel>Subject:</FormLabel>
         <Input
           type="text"
-          //id="subject"
           name="subject"
           errorBorderColor="red.300"
           value={formData.subject}
@@ -164,7 +160,6 @@ function Contact() {
       >
         <FormLabel>Message:</FormLabel>
         <Textarea
-          //id="message"
           name="message"
           rows={4}
           errorBorderColor="red.300"
