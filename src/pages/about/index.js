@@ -6,15 +6,35 @@ import {
   Link,
   Table,
   TableContainer,
-  Thead,
   Tr,
-  Th,
   Tbody,
   Td,
-  Tfoot,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+
+// const profileImages = [
+//   "/images/profile-picture.jpg",
+//   "/images/extra-life_controllerdice.svg",
+//   "/images/sloth.jpg",
+// ];
 
 function About() {
+  // const [indexState, setIndexState] = useState(0);
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     if (indexState === profileImages.length - 1) {
+  //       setIndexState(0);
+  //       console.log(indexState);
+  //     } else {
+  //       setIndexState(indexState + 1);
+  //       console.log(indexState);
+  //     }
+  //   }, 5000);
+
+  //   return () => clearInterval(intervalId);
+  // }, [indexState]);
+
   return (
     <Container minWidth={"100%"} minHeight={"125vh"} textAlign={"start"}>
       <Container
@@ -25,12 +45,14 @@ function About() {
       >
         <Container pt={"1em"} display={"flex"} minWidth={"80%"}>
           <Image
-            src="/images/sloth.jpg"
+            src="/images/profile-picture.jpg" //{profileImages[indexState]}
             alt="Sloth"
             maxWidth={"50vw"}
             maxHeight={"50vh"}
             borderRadius={"full"}
-            pr={"1em"}
+            borderStyle={"double"}
+            borderWidth={"thick"}
+            //pr={"1em"}
           />
           <Container
             padding={".5em 2em"}
@@ -104,7 +126,7 @@ function About() {
           >
             <Text maxWidth={"50vw"} maxHeight={"50vh"}>
               {
-                "On the other hand, my Computer Science degree gave me the tools to succeed as a software engineer in an ever-developing field. I learned how to code in several programming languages, work with databases, and design and build complex software systems. Additionally, my degree provided me with the opportunity to learn about various topics such as artificial intelligence, web development, and security. I love that the field of computer science is constantly evolving, and there's always something new to learn."
+                "My Computer Science degree gave me the tools to succeed as a software engineer in an ever-developing field. I learned how to code in several programming languages, work with databases, and design and build complex software systems. Additionally, my degree provided me with the opportunity to learn about various topics such as artificial intelligence, web development, and security. I love that the field of computer science is constantly evolving, and there's always something new to learn."
               }
             </Text>
           </Container>
@@ -124,7 +146,7 @@ function About() {
           >
             <Text maxWidth={"50vw"} maxHeight={"50vh"}>
               {
-                "I believe that my diverse academic background has contributed to making me a well-rounded individual and a valuable member of any team. I'm excited to see where my career as a software developer takes me and look forward to tackling new and exciting challenges in the years to come."
+                "I believe that my diverse background and mix of interests has contributed to making me a well-rounded individual and a valuable member of any team. I'm excited to see where my career as a software developer takes me and look forward to tackling new and exciting challenges in the years to come."
               }
             </Text>
           </Container>
