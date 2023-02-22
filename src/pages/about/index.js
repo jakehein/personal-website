@@ -1,60 +1,97 @@
-import {
-  Container,
-  Heading,
-  Text,
-  Image,
-  UnorderedList,
-  ListItem,
-} from "@chakra-ui/react";
+import { Container, Heading, Text, Image, Link } from "@chakra-ui/react";
 
 function About() {
   return (
-    <Container>
-      <Heading size={"lg"}>About Me</Heading>
-      <Container display={"flex"}>
+    <Container minWidth={"100%"} minHeight={"125vh"} textAlign={"start"}>
+      <Container pt={"1em"} display={"flex"} minWidth={"80%"}>
         <Image
           src="/images/sloth.jpg"
           alt="Sloth"
-          width={150}
-          height={200}
+          maxWidth={"50vw"}
+          maxHeight={"50vh"}
           borderRadius={"full"}
+          pr={"1em"}
         />
+        <Container
+          padding={".5em 2em"}
+          border={"groove"}
+          backgroundColor={"black"}
+          opacity={".8"}
+          fontSize={"md"}
+          pl={"1em"}
+          height={"max-content"}
+          alignSelf={"center"}
+        >
+          <Text fontSize={"lg"}>{"How's it going!"}</Text>
+          <br />
+          <Text>
+            {
+              "I'm a fullstack developer based in the greater Seattle area. I've got a BA in Computer Science and a BS in History and Anthropology, both of which I obtained while attending University of Wisconsin Oshkosh."
+            }
+          </Text>
+        </Container>
+      </Container>
+
+      <Heading size={"lg"} textAlign={"center"}>
+        Philanthropy
+      </Heading>
+
+      <Container pt={"1em"} display={"flex"} minWidth={"80%"}>
         <Text
           padding={".5em 2em"}
           border={"groove"}
-          borderRadius={"15%"}
           backgroundColor={"black"}
           opacity={".8"}
+          fontSize={"md"}
+          pl={"1em"}
+          height={"max-content"}
+          alignSelf={"center"}
         >
           {
             "I received my Bachelor of Science degree from the University of Wisconsin Oshkosh, majoring in Computer Science. I have a background in history and anthropology, and have a knack for creative problem solving. My most used languages are TypeScript/JavaScript and C#. Most of my experience is backend development, although I have a lot of frontend experience in Vue and Angular. My greatest strength is my willingness to learn new things and adapt to ever-changing obstacles. I enjoy learning new things, and I prefer to make sure I understand what I'm doing before brashly coding something I'm unsure of. This benefits both me an my employers, as I gain useful experience and skills, and they gain an employee/contractor that is openly communicative about their needs on the job. I am dedicated to doing my best work because doing my best is what I am most passionate about."
           }
         </Text>
-        <Heading size={"lg"}>Philanthropy</Heading>
+        <Link
+          fontSize={"center"}
+          target="_blank"
+          href="https://www.extra-life.org/"
+          display={"flex"}
+          justifyContent={"center"}
+          marginLeft={"-2em"}
+        >
+          <Image
+            src="/images/extra-life_controllerdice.svg"
+            alt="extra life"
+            minWidth={"50vw"}
+            maxHeight={"40vh"}
+          />
+        </Link>
+      </Container>
 
+      <Heading size={"lg"} textAlign={"center"}>
+        Follow my GitHub:
+      </Heading>
+      <Container
+        pt={"1em"}
+        display={"flex"}
+        minWidth={"80%"}
+        justifyContent={"center"}
+      >
         <Text
           padding={".5em 2em"}
           border={"groove"}
-          borderRadius={"15%"}
           backgroundColor={"black"}
           opacity={".8"}
+          fontSize={"md"}
+          pl={"1em"}
+          height={"max-content"}
         >
-          {"INSERT-EXTRA-LIFE-INFO-HERE"}
+          {"https://github.com/jakehein"}
         </Text>
       </Container>
 
-      <Heading size={"lg"}>Follow my GitHub:</Heading>
-      <Text
-        padding={".5em 2em"}
-        border={"groove"}
-        borderRadius={"15%"}
-        backgroundColor={"black"}
-        opacity={".8"}
-      >
-        {"https://github.com/jakehein"}
-      </Text>
-      <Heading size={"lg"}>EXPERTISE:</Heading>
-      <UnorderedList
+      {/* <Heading size={"lg"}>EXPERTISE:</Heading> */}
+      {/* <UnorderedList
         padding={".5em 2em"}
         border={"groove"}
         borderRadius={"15%"}
@@ -115,7 +152,7 @@ function About() {
         <ListItem listStyleType={"none"}>
           <Text as={"span"}>MEAN stack development</Text>
         </ListItem>
-      </UnorderedList>
+      </UnorderedList> */}
     </Container>
   );
 }
