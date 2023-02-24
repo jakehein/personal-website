@@ -9,6 +9,7 @@ import {
   Tr,
   Tbody,
   Td,
+  keyframes,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
@@ -18,7 +19,29 @@ import { useEffect, useState } from "react";
 //   "/images/sloth.jpg",
 // ];
 
+const animation = keyframes`
+  from {
+    background: inherit
+  }
+  to {
+    background: lightblue
+  }
+  // 10%, 90% {
+  //   transform: translate3d(-1px, 0, 0);
+  // }
+  // 20%, 80% {
+  //   transform: translate3d(2px, 0, 0)
+  // }
+  // 30%, 50%, 70% {
+  //   transform: translate3d(-4px, 0, 0);
+  // }
+  // 40%, 60% {
+  //   transform: translate3d(4px, 0, 0)
+  // }
+`;
+
 function About() {
+  const myAnimation = `${animation} linear 1s`;
   // const [indexState, setIndexState] = useState(0);
 
   // useEffect(() => {
@@ -43,7 +66,12 @@ function About() {
         minHeight={"125vh"}
         textAlign={"start"}
       >
-        <Container pt={"1em"} display={"flex"} minWidth={"80%"}>
+        <Container
+          pt={"1em"}
+          display={"flex"}
+          minWidth={"80%"}
+          _hover={{ animation: myAnimation, background: "lightblue" }}
+        >
           <Image
             src="/images/profile-picture.jpg" //{profileImages[indexState]}
             alt="Sloth"

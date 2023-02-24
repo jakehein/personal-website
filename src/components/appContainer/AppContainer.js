@@ -1,8 +1,15 @@
-import { Container, Image, Link, Text } from "@chakra-ui/react";
+import { Container, Image, Link, Text, keyframes } from "@chakra-ui/react";
 import { Fragment } from "react";
 import NavBar from "../../components/navigation/NavBar";
 
+const bannerAnimationKeyframes = keyframes`
+  from {opacity: .4} 
+  to {opacity: 1}
+`;
+
 function AppContainer({ children }) {
+  const bannerAnimation = `${bannerAnimationKeyframes} 0.5s linear`;
+
   return (
     <Container
       textAlign="center"
@@ -22,12 +29,14 @@ function AppContainer({ children }) {
           target="_blank"
           href="https://supportukrainenow.org/"
           display={"flex"}
-          bgGradient="linear(to-r, rgba(0,0,0,0), rgba(26,32,44,1), rgba(0,0,0,0))"
+          transition={"all 0.5s linear"}
+          //bgGradient="linear(to-r, rgba(0,0,0,0), rgba(26,32,44,1), rgba(0,0,0,0))"
           _hover={{
             textDecoration: "none",
             bgGradient:
               //blue "linear(to-r, rgba(0,0,0,0), rgba(78,66,245,1), rgba(0,0,0,0))",
               "linear(to-r, rgba(0,0,0,0), rgba(224,25,25,1), rgba(0,0,0,0))",
+            animation: bannerAnimation,
           }}
           justifyContent={"center"}
         >
