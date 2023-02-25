@@ -30,7 +30,6 @@ function AppContainer({ children }) {
           href="https://supportukrainenow.org/"
           display={"flex"}
           transition={"all 0.5s linear"}
-          //bgGradient="linear(to-r, rgba(0,0,0,0), rgba(26,32,44,1), rgba(0,0,0,0))"
           _hover={{
             textDecoration: "none",
             bgGradient:

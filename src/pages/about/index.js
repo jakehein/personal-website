@@ -10,53 +10,21 @@ import {
   Tbody,
   Td,
   keyframes,
+  Fade,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-// const profileImages = [
-//   "/images/profile-picture.jpg",
-//   "/images/extra-life_controllerdice.svg",
-//   "/images/sloth.jpg",
-// ];
-
-const animation = keyframes`
-  from {
-    background: inherit
-  }
-  to {
-    background: lightblue
-  }
-  // 10%, 90% {
-  //   transform: translate3d(-1px, 0, 0);
-  // }
-  // 20%, 80% {
-  //   transform: translate3d(2px, 0, 0)
-  // }
-  // 30%, 50%, 70% {
-  //   transform: translate3d(-4px, 0, 0);
-  // }
-  // 40%, 60% {
-  //   transform: translate3d(4px, 0, 0)
-  // }
-`;
+// const animation = keyframes`
+//   from {
+//     background: inherit
+//   }
+//   to {
+//     background: rgba(26,32,44,1)
+//   }
+// `;
 
 function About() {
-  const myAnimation = `${animation} linear 1s`;
-  // const [indexState, setIndexState] = useState(0);
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     if (indexState === profileImages.length - 1) {
-  //       setIndexState(0);
-  //       console.log(indexState);
-  //     } else {
-  //       setIndexState(indexState + 1);
-  //       console.log(indexState);
-  //     }
-  //   }, 5000);
-
-  //   return () => clearInterval(intervalId);
-  // }, [indexState]);
+  //const myAnimation = `${animation} linear 1s`;
 
   return (
     <Container minWidth={"100%"} minHeight={"125vh"} textAlign={"start"}>
@@ -67,21 +35,24 @@ function About() {
         textAlign={"start"}
       >
         <Container
-          pt={"1em"}
+          //pt={"1em"}
           display={"flex"}
           minWidth={"80%"}
-          _hover={{ animation: myAnimation, background: "lightblue" }}
+          // _hover={{
+          //   animation: myAnimation,
+          //   background: "rgba(26,32,44,1)",
+          // }}
         >
           <Image
-            src="/images/profile-picture.jpg" //{profileImages[indexState]}
-            alt="Sloth"
+            src="/images/profile-picture.jpg"
+            alt="profileImg"
             maxWidth={"50vw"}
             maxHeight={"50vh"}
             borderRadius={"full"}
             borderStyle={"double"}
             borderWidth={"thick"}
-            //pr={"1em"}
           />
+
           <Container
             padding={".5em 2em"}
             border={"groove"}
@@ -124,7 +95,7 @@ function About() {
 
           <Image
             src="/images/sloth.jpg"
-            alt="Sloth"
+            alt="firstDegreeImg"
             maxWidth={"50vw"}
             maxHeight={"50vh"}
             borderRadius={"full"}
@@ -135,7 +106,7 @@ function About() {
         <Container pt={"1em"} display={"flex"} minWidth={"80%"}>
           <Image
             src="/images/sloth.jpg"
-            alt="Sloth"
+            alt="secondDegreeImg"
             maxWidth={"50vw"}
             maxHeight={"50vh"}
             borderRadius={"full"}
@@ -181,7 +152,7 @@ function About() {
 
           <Image
             src="/images/sloth.jpg"
-            alt="Sloth"
+            alt="workImg"
             maxWidth={"50vw"}
             maxHeight={"50vh"}
             borderRadius={"full"}
